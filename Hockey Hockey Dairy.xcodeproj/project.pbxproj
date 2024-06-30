@@ -1,0 +1,713 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BBBD1602C2C07340057F363 /* Hockey_Hockey_DairyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD15F2C2C07340057F363 /* Hockey_Hockey_DairyApp.swift */; };
+		2BBBD1622C2C07340057F363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1612C2C07340057F363 /* ContentView.swift */; };
+		2BBBD1642C2C07360057F363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBBD1632C2C07360057F363 /* Assets.xcassets */; };
+		2BBBD1672C2C07360057F363 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBBD1662C2C07360057F363 /* Preview Assets.xcassets */; };
+		2BBBD1722C2C08660057F363 /* LoadingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1712C2C08660057F363 /* LoadingUIView.swift */; };
+		2BBBD1762C2C20050057F363 /* LoadingUserUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1752C2C20050057F363 /* LoadingUserUIView.swift */; };
+		2BBBD1792C2C4F250057F363 /* TabUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1782C2C4F250057F363 /* TabUIView.swift */; };
+		2BBBD17C2C2C57C60057F363 /* TeamUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD17B2C2C57C60057F363 /* TeamUIView.swift */; };
+		2BBBD1812C2C5B9C0057F363 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1802C2C5B9C0057F363 /* TeamModel.swift */; };
+		2BBBD1832C2C5D1A0057F363 /* TeamCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1822C2C5D1A0057F363 /* TeamCellUIView.swift */; };
+		2BBBD1852C2D5B7C0057F363 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1842C2D5B7C0057F363 /* TeamViewModel.swift */; };
+		2BBBD1882C2D69740057F363 /* AddPlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1872C2D69740057F363 /* AddPlayerUIView.swift */; };
+		2BBBD18A2C2D6ED40057F363 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1892C2D6ED40057F363 /* ImagePickerController.swift */; };
+		2BBBD18C2C2D8CDD0057F363 /* UpdatePlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD18B2C2D8CDD0057F363 /* UpdatePlayerUIView.swift */; };
+		2BBBD1952C2DB22C0057F363 /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1942C2DB22C0057F363 /* InventoryViewModel.swift */; };
+		2BBBD1972C2DB2370057F363 /* InventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1962C2DB2370057F363 /* InventoryModel.swift */; };
+		2BBBD1992C2DB2430057F363 /* InventoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1982C2DB2430057F363 /* InventoryUIView.swift */; };
+		2BBBD19B2C2EA6470057F363 /* InventoryCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD19A2C2EA6470057F363 /* InventoryCellUIView.swift */; };
+		2BBBD19E2C2EAF4E0057F363 /* AddInventoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD19D2C2EAF4D0057F363 /* AddInventoryUIView.swift */; };
+		2BBBD1A02C2EB74C0057F363 /* UpdateInventoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD19F2C2EB74C0057F363 /* UpdateInventoryUIView.swift */; };
+		2BBBD1A22C2ED62B0057F363 /* PlayerInventoryUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1A12C2ED62B0057F363 /* PlayerInventoryUIView.swift */; };
+		2BBBD1A52C2FF3AD0057F363 /* ShoppingListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1A42C2FF3AD0057F363 /* ShoppingListUIView.swift */; };
+		2BBBD1AB2C2FF42F0057F363 /* AddItemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1AA2C2FF42F0057F363 /* AddItemUIView.swift */; };
+		2BBBD1AD2C2FF4460057F363 /* UpdateItemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1AC2C2FF4460057F363 /* UpdateItemUIView.swift */; };
+		2BBBD1AF2C2FF4AF0057F363 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1AE2C2FF4AF0057F363 /* ItemModel.swift */; };
+		2BBBD1B12C2FF6610057F363 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1B02C2FF6610057F363 /* ItemViewModel.swift */; };
+		2BBBD1B72C3018930057F363 /* CalendarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1B62C3018930057F363 /* CalendarUIView.swift */; };
+		2BBBD1B92C3019060057F363 /* CalendarDayUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1B82C3019060057F363 /* CalendarDayUIView.swift */; };
+		2BBBD1BB2C301B6B0057F363 /* GameCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1BA2C301B6B0057F363 /* GameCardUIView.swift */; };
+		2BBBD1BD2C3022BE0057F363 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1BC2C3022BE0057F363 /* DayModel.swift */; };
+		2BBBD1BF2C30234F0057F363 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1BE2C30234F0057F363 /* CalendarViewModel.swift */; };
+		2BBBD1C12C30337C0057F363 /* AddGameUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1C02C30337C0057F363 /* AddGameUIView.swift */; };
+		2BBBD1C32C3049CD0057F363 /* UpdateGameUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1C22C3049CD0057F363 /* UpdateGameUIView.swift */; };
+		2BBBD1C62C318D860057F363 /* Date + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1C52C318D860057F363 /* Date + ext.swift */; };
+		2BBBD1CB2C318E2B0057F363 /* SettingsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1CA2C318E2B0057F363 /* SettingsUIView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BBBD15C2C2C07340057F363 /* Hockey Hockey Dairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hockey Hockey Dairy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBBD15F2C2C07340057F363 /* Hockey_Hockey_DairyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hockey_Hockey_DairyApp.swift; sourceTree = "<group>"; };
+		2BBBD1612C2C07340057F363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BBBD1632C2C07360057F363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BBBD1662C2C07360057F363 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2BBBD1712C2C08660057F363 /* LoadingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUIView.swift; sourceTree = "<group>"; };
+		2BBBD1752C2C20050057F363 /* LoadingUserUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUserUIView.swift; sourceTree = "<group>"; };
+		2BBBD1782C2C4F250057F363 /* TabUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUIView.swift; sourceTree = "<group>"; };
+		2BBBD17B2C2C57C60057F363 /* TeamUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamUIView.swift; sourceTree = "<group>"; };
+		2BBBD1802C2C5B9C0057F363 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		2BBBD1822C2C5D1A0057F363 /* TeamCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCellUIView.swift; sourceTree = "<group>"; };
+		2BBBD1842C2D5B7C0057F363 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		2BBBD1872C2D69740057F363 /* AddPlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerUIView.swift; sourceTree = "<group>"; };
+		2BBBD1892C2D6ED40057F363 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		2BBBD18B2C2D8CDD0057F363 /* UpdatePlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePlayerUIView.swift; sourceTree = "<group>"; };
+		2BBBD1942C2DB22C0057F363 /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		2BBBD1962C2DB2370057F363 /* InventoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryModel.swift; sourceTree = "<group>"; };
+		2BBBD1982C2DB2430057F363 /* InventoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryUIView.swift; sourceTree = "<group>"; };
+		2BBBD19A2C2EA6470057F363 /* InventoryCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCellUIView.swift; sourceTree = "<group>"; };
+		2BBBD19D2C2EAF4D0057F363 /* AddInventoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInventoryUIView.swift; sourceTree = "<group>"; };
+		2BBBD19F2C2EB74C0057F363 /* UpdateInventoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInventoryUIView.swift; sourceTree = "<group>"; };
+		2BBBD1A12C2ED62B0057F363 /* PlayerInventoryUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInventoryUIView.swift; sourceTree = "<group>"; };
+		2BBBD1A42C2FF3AD0057F363 /* ShoppingListUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListUIView.swift; sourceTree = "<group>"; };
+		2BBBD1AA2C2FF42F0057F363 /* AddItemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemUIView.swift; sourceTree = "<group>"; };
+		2BBBD1AC2C2FF4460057F363 /* UpdateItemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemUIView.swift; sourceTree = "<group>"; };
+		2BBBD1AE2C2FF4AF0057F363 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		2BBBD1B02C2FF6610057F363 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		2BBBD1B62C3018930057F363 /* CalendarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUIView.swift; sourceTree = "<group>"; };
+		2BBBD1B82C3019060057F363 /* CalendarDayUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayUIView.swift; sourceTree = "<group>"; };
+		2BBBD1BA2C301B6B0057F363 /* GameCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardUIView.swift; sourceTree = "<group>"; };
+		2BBBD1BC2C3022BE0057F363 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		2BBBD1BE2C30234F0057F363 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		2BBBD1C02C30337C0057F363 /* AddGameUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameUIView.swift; sourceTree = "<group>"; };
+		2BBBD1C22C3049CD0057F363 /* UpdateGameUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGameUIView.swift; sourceTree = "<group>"; };
+		2BBBD1C52C318D860057F363 /* Date + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + ext.swift"; sourceTree = "<group>"; };
+		2BBBD1CA2C318E2B0057F363 /* SettingsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BBBD1592C2C07340057F363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BBBD1532C2C07340057F363 = {
+			isa = PBXGroup;
+			children = (
+				2BBBD15E2C2C07340057F363 /* Hockey Hockey Dairy */,
+				2BBBD15D2C2C07340057F363 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BBBD15D2C2C07340057F363 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD15C2C2C07340057F363 /* Hockey Hockey Dairy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BBBD15E2C2C07340057F363 /* Hockey Hockey Dairy */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD16D2C2C08260057F363 /* First */,
+				2BBBD16E2C2C08340057F363 /* Second */,
+				2BBBD15F2C2C07340057F363 /* Hockey_Hockey_DairyApp.swift */,
+				2BBBD1612C2C07340057F363 /* ContentView.swift */,
+				2BBBD1632C2C07360057F363 /* Assets.xcassets */,
+				2BBBD1652C2C07360057F363 /* Preview Content */,
+			);
+			path = "Hockey Hockey Dairy";
+			sourceTree = "<group>";
+		};
+		2BBBD1652C2C07360057F363 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1662C2C07360057F363 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BBBD16D2C2C08260057F363 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1C42C318D720057F363 /* Extensions */,
+				2BBBD16F2C2C083F0057F363 /* Modules */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		2BBBD16E2C2C08340057F363 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1732C2C1FCD0057F363 /* Modules */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		2BBBD16F2C2C083F0057F363 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1C72C318E030057F363 /* Settings */,
+				2BBBD1B22C3018690057F363 /* GameCalendar */,
+				2BBBD1A32C2FF2C80057F363 /* ShoppingList */,
+				2BBBD1902C2DB2060057F363 /* Inventory */,
+				2BBBD17A2C2C57B30057F363 /* Team */,
+				2BBBD1772C2C4F160057F363 /* TabView */,
+				2BBBD1702C2C084F0057F363 /* LoadView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2BBBD1702C2C084F0057F363 /* LoadView */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1712C2C08660057F363 /* LoadingUIView.swift */,
+			);
+			path = LoadView;
+			sourceTree = "<group>";
+		};
+		2BBBD1732C2C1FCD0057F363 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1742C2C1FDA0057F363 /* LoadViewUser */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2BBBD1742C2C1FDA0057F363 /* LoadViewUser */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1752C2C20050057F363 /* LoadingUserUIView.swift */,
+			);
+			path = LoadViewUser;
+			sourceTree = "<group>";
+		};
+		2BBBD1772C2C4F160057F363 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1782C2C4F250057F363 /* TabUIView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		2BBBD17A2C2C57B30057F363 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1862C2D695D0057F363 /* AddPlayer */,
+				2BBBD17E2C2C5B540057F363 /* Model */,
+				2BBBD17D2C2C5B480057F363 /* View */,
+				2BBBD17F2C2C5B5F0057F363 /* ViewModel */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		2BBBD17D2C2C5B480057F363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD17B2C2C57C60057F363 /* TeamUIView.swift */,
+				2BBBD1822C2C5D1A0057F363 /* TeamCellUIView.swift */,
+				2BBBD1A12C2ED62B0057F363 /* PlayerInventoryUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BBBD17E2C2C5B540057F363 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1802C2C5B9C0057F363 /* TeamModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BBBD17F2C2C5B5F0057F363 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1842C2D5B7C0057F363 /* TeamViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BBBD1862C2D695D0057F363 /* AddPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1872C2D69740057F363 /* AddPlayerUIView.swift */,
+				2BBBD1892C2D6ED40057F363 /* ImagePickerController.swift */,
+				2BBBD18B2C2D8CDD0057F363 /* UpdatePlayerUIView.swift */,
+			);
+			path = AddPlayer;
+			sourceTree = "<group>";
+		};
+		2BBBD1902C2DB2060057F363 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD19C2C2EAF360057F363 /* AddInventory */,
+				2BBBD1932C2DB21B0057F363 /* Model */,
+				2BBBD1922C2DB2170057F363 /* View */,
+				2BBBD1912C2DB20F0057F363 /* ViewModel */,
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		2BBBD1912C2DB20F0057F363 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1942C2DB22C0057F363 /* InventoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BBBD1922C2DB2170057F363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1982C2DB2430057F363 /* InventoryUIView.swift */,
+				2BBBD19A2C2EA6470057F363 /* InventoryCellUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BBBD1932C2DB21B0057F363 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1962C2DB2370057F363 /* InventoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BBBD19C2C2EAF360057F363 /* AddInventory */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD19D2C2EAF4D0057F363 /* AddInventoryUIView.swift */,
+				2BBBD19F2C2EB74C0057F363 /* UpdateInventoryUIView.swift */,
+			);
+			path = AddInventory;
+			sourceTree = "<group>";
+		};
+		2BBBD1A32C2FF2C80057F363 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1A92C2FF4000057F363 /* ViewModel */,
+				2BBBD1A82C2FF3FA0057F363 /* View */,
+				2BBBD1A72C2FF3F50057F363 /* Model */,
+				2BBBD1A62C2FF3EB0057F363 /* AddItem */,
+			);
+			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		2BBBD1A62C2FF3EB0057F363 /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1AA2C2FF42F0057F363 /* AddItemUIView.swift */,
+				2BBBD1AC2C2FF4460057F363 /* UpdateItemUIView.swift */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
+		2BBBD1A72C2FF3F50057F363 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1AE2C2FF4AF0057F363 /* ItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BBBD1A82C2FF3FA0057F363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1A42C2FF3AD0057F363 /* ShoppingListUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BBBD1A92C2FF4000057F363 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1B02C2FF6610057F363 /* ItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BBBD1B22C3018690057F363 /* GameCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1B52C30187E0057F363 /* Model */,
+				2BBBD1B42C3018790057F363 /* View */,
+				2BBBD1B32C3018720057F363 /* ViewModel */,
+			);
+			path = GameCalendar;
+			sourceTree = "<group>";
+		};
+		2BBBD1B32C3018720057F363 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1BE2C30234F0057F363 /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BBBD1B42C3018790057F363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1B62C3018930057F363 /* CalendarUIView.swift */,
+				2BBBD1B82C3019060057F363 /* CalendarDayUIView.swift */,
+				2BBBD1BA2C301B6B0057F363 /* GameCardUIView.swift */,
+				2BBBD1C02C30337C0057F363 /* AddGameUIView.swift */,
+				2BBBD1C22C3049CD0057F363 /* UpdateGameUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BBBD1B52C30187E0057F363 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1BC2C3022BE0057F363 /* DayModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BBBD1C42C318D720057F363 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1C52C318D860057F363 /* Date + ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BBBD1C72C318E030057F363 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1C92C318E1D0057F363 /* ViewModel */,
+				2BBBD1C82C318E140057F363 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2BBBD1C82C318E140057F363 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1CA2C318E2B0057F363 /* SettingsUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BBBD1C92C318E1D0057F363 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BBBD15B2C2C07340057F363 /* Hockey Hockey Dairy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BBBD16A2C2C07360057F363 /* Build configuration list for PBXNativeTarget "Hockey Hockey Dairy" */;
+			buildPhases = (
+				2BBBD1582C2C07340057F363 /* Sources */,
+				2BBBD1592C2C07340057F363 /* Frameworks */,
+				2BBBD15A2C2C07340057F363 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hockey Hockey Dairy";
+			productName = "Hockey Hockey Dairy";
+			productReference = 2BBBD15C2C2C07340057F363 /* Hockey Hockey Dairy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BBBD1542C2C07340057F363 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2BBBD15B2C2C07340057F363 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 2BBBD1572C2C07340057F363 /* Build configuration list for PBXProject "Hockey Hockey Dairy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BBBD1532C2C07340057F363;
+			productRefGroup = 2BBBD15D2C2C07340057F363 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BBBD15B2C2C07340057F363 /* Hockey Hockey Dairy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BBBD15A2C2C07340057F363 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBBD1672C2C07360057F363 /* Preview Assets.xcassets in Resources */,
+				2BBBD1642C2C07360057F363 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BBBD1582C2C07340057F363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBBD1AD2C2FF4460057F363 /* UpdateItemUIView.swift in Sources */,
+				2BBBD18C2C2D8CDD0057F363 /* UpdatePlayerUIView.swift in Sources */,
+				2BBBD1762C2C20050057F363 /* LoadingUserUIView.swift in Sources */,
+				2BBBD1A02C2EB74C0057F363 /* UpdateInventoryUIView.swift in Sources */,
+				2BBBD1B72C3018930057F363 /* CalendarUIView.swift in Sources */,
+				2BBBD1C62C318D860057F363 /* Date + ext.swift in Sources */,
+				2BBBD1C32C3049CD0057F363 /* UpdateGameUIView.swift in Sources */,
+				2BBBD1992C2DB2430057F363 /* InventoryUIView.swift in Sources */,
+				2BBBD1C12C30337C0057F363 /* AddGameUIView.swift in Sources */,
+				2BBBD17C2C2C57C60057F363 /* TeamUIView.swift in Sources */,
+				2BBBD1622C2C07340057F363 /* ContentView.swift in Sources */,
+				2BBBD1882C2D69740057F363 /* AddPlayerUIView.swift in Sources */,
+				2BBBD1CB2C318E2B0057F363 /* SettingsUIView.swift in Sources */,
+				2BBBD1792C2C4F250057F363 /* TabUIView.swift in Sources */,
+				2BBBD1972C2DB2370057F363 /* InventoryModel.swift in Sources */,
+				2BBBD1952C2DB22C0057F363 /* InventoryViewModel.swift in Sources */,
+				2BBBD1A22C2ED62B0057F363 /* PlayerInventoryUIView.swift in Sources */,
+				2BBBD1B92C3019060057F363 /* CalendarDayUIView.swift in Sources */,
+				2BBBD1812C2C5B9C0057F363 /* TeamModel.swift in Sources */,
+				2BBBD1A52C2FF3AD0057F363 /* ShoppingListUIView.swift in Sources */,
+				2BBBD1BD2C3022BE0057F363 /* DayModel.swift in Sources */,
+				2BBBD18A2C2D6ED40057F363 /* ImagePickerController.swift in Sources */,
+				2BBBD19B2C2EA6470057F363 /* InventoryCellUIView.swift in Sources */,
+				2BBBD1722C2C08660057F363 /* LoadingUIView.swift in Sources */,
+				2BBBD1B12C2FF6610057F363 /* ItemViewModel.swift in Sources */,
+				2BBBD19E2C2EAF4E0057F363 /* AddInventoryUIView.swift in Sources */,
+				2BBBD1602C2C07340057F363 /* Hockey_Hockey_DairyApp.swift in Sources */,
+				2BBBD1AB2C2FF42F0057F363 /* AddItemUIView.swift in Sources */,
+				2BBBD1BB2C301B6B0057F363 /* GameCardUIView.swift in Sources */,
+				2BBBD1AF2C2FF4AF0057F363 /* ItemModel.swift in Sources */,
+				2BBBD1832C2C5D1A0057F363 /* TeamCellUIView.swift in Sources */,
+				2BBBD1BF2C30234F0057F363 /* CalendarViewModel.swift in Sources */,
+				2BBBD1852C2D5B7C0057F363 /* TeamViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2BBBD1682C2C07360057F363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BBBD1692C2C07360057F363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BBBD16B2C2C07360057F363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hockey Hockey Dairy/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "adm.Hockey-Hockey-Dairy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BBBD16C2C2C07360057F363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hockey Hockey Dairy/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "adm.Hockey-Hockey-Dairy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BBBD1572C2C07340057F363 /* Build configuration list for PBXProject "Hockey Hockey Dairy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBBD1682C2C07360057F363 /* Debug */,
+				2BBBD1692C2C07360057F363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BBBD16A2C2C07360057F363 /* Build configuration list for PBXNativeTarget "Hockey Hockey Dairy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBBD16B2C2C07360057F363 /* Debug */,
+				2BBBD16C2C2C07360057F363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BBBD1542C2C07340057F363 /* Project object */;
+}
