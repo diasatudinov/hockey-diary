@@ -121,7 +121,7 @@ struct AddInventoryUIView: View {
             Button {
                 if !name.isEmpty && !position.isEmpty {
                     if let image = selectedImage {
-                        inventoryVM.addInventory(Inventory(name: name, imageData: image.pngData(), position: position))
+                        inventoryVM.addInventory(Inventory(name: name, imageData: image.jpegData(compressionQuality: 1.0), position: position))
                     } else {
                         inventoryVM.addInventory(Inventory(name: name, position: position))
                     }

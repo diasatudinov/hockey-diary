@@ -9,20 +9,20 @@ import SwiftUI
 
 
 class ItemViewModel: ObservableObject {
-    @Published var items: [ShoppingItem] = [
-        ShoppingItem(name: "Gloves", position: "Striker", price: "250"),
-        ShoppingItem(name: "Helmet", position: "All positions", price: "100"),
-        ShoppingItem(name: "Shirt", position: "Striker", price: "350"),
-                     ShoppingItem(name: "Gloves", position: "Striker", price: "250"),
-                     ShoppingItem(name: "Helmet", position: "All positions", price: "100"),
-                     ShoppingItem(name: "Shirt", position: "Striker", price: "350"),
-                                  ShoppingItem(name: "Gloves", position: "Striker", price: "250"),
-                                  ShoppingItem(name: "Helmet", position: "All positions", price: "100"),
-                                  ShoppingItem(name: "Shirt", position: "Striker", price: "350")
-    ]
+    @Published var items: [ShoppingItem] = [] {
+        didSet {
+            saveItems()
+        }
+    }
     
-    func addItem(_ inventory: ShoppingItem) {
-        items.append(inventory)
+    private let itemsFileName = "items.json"
+    
+    init() {
+        loadItems()
+    }
+    
+    func addItem(_ item: ShoppingItem) {
+        items.append(item)
     }
 
     func updateItem(at index: Int, newImage: UIImage?, newName: String, newPosition: String, newPrice: String) {
@@ -39,6 +39,36 @@ class ItemViewModel: ObservableObject {
     
     func delete(at offsets: IndexSet) {
         items.remove(atOffsets: offsets)
+    }
+    
+    
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func itemsFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(itemsFileName)
+    }
+    
+    private func saveItems() {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(items)
+            try data.write(to: itemsFilePath())
+        } catch {
+            print("Failed to save items: \(error.localizedDescription)")
+        }
+    }
+    
+    private func loadItems() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: itemsFilePath())
+            items = try decoder.decode([ShoppingItem].self, from: data)
+        } catch {
+            print("Failed to load items: \(error.localizedDescription)")
+        }
     }
     
 }

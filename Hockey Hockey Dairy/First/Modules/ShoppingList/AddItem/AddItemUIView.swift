@@ -138,7 +138,7 @@ struct AddItemUIView: View {
             Button {
                 if !name.isEmpty && !position.isEmpty {
                     if let image = selectedImage {
-                        itemVM.addItem(ShoppingItem(image: image, name: name, position: position, price: price))
+                        itemVM.addItem(ShoppingItem(imageData: image.jpegData(compressionQuality: 1.0), name: name, position: position, price: price))
                     } else {
                             itemVM.addItem(ShoppingItem(name: name, position: position, price: price))
                     }
