@@ -28,7 +28,7 @@ struct TabUIView: View {
     }
     var body: some View {
         TabView {
-            TeamUIView(teamVM: teamVM)
+            TeamUIView(inventoryVM: inventoryVM, teamVM: teamVM)
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text("Team")

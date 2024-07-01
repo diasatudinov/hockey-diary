@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct AddPlayerUIView: View {
-    @ObservedObject var inventoryVM = InventoryViewModel()
+    @ObservedObject var inventoryVM: InventoryViewModel
     @ObservedObject var teamVM: TeamViewModel
     @Binding var isPresented: Bool
     @State private var isShowingImagePicker = false
@@ -149,7 +149,7 @@ struct AddPlayerUIView: View {
                 
                 
                 NavigationLink {
-                    PlayerInventoryUIView(teamVM: teamVM, inventories: $newInventory)
+                    PlayerInventoryUIView(inventoryVM: inventoryVM, teamVM: teamVM, inventories: newInventory)
                 } label: {
                     ZStack(alignment: .leading) {
                         Rectangle()
@@ -237,6 +237,6 @@ struct AddPlayerUIView: View {
 }
 
 #Preview {
-    AddPlayerUIView(teamVM: TeamViewModel(), isPresented: .constant(true))
+    AddPlayerUIView(inventoryVM: InventoryViewModel(), teamVM: TeamViewModel(), isPresented: .constant(true))
 }
 

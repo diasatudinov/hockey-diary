@@ -39,7 +39,7 @@ struct ShoppingListUIView: View {
                 if !itemVM.items.isEmpty {
                     List {
                         ForEach(itemVM.items) { item in
-                            InventoryCellUIView(selectedImage: item.image, name: item.name, position: item.position, price: item.price, state: .shopItem, isChosen: .constant(false))
+                            InventoryCellUIView(selectedImage: item.image, name: item.name, position: item.position, price: item.price, state: .shopItem, isChosen: false)
                                 .cornerRadius(10)
                                 .padding(.vertical, -5)
                                 .padding(.horizontal, -4)

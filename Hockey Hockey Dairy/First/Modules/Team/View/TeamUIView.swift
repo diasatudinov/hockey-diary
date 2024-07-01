@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct TeamUIView: View {
+    @ObservedObject var inventoryVM: InventoryViewModel
     @ObservedObject var teamVM: TeamViewModel
     @State private var showSheet = false
     let standardNavBarHeight = UIScreen.main.bounds.height / 5.5
     var groupedPlayers: [String: [Player]] {
         Dictionary(grouping: teamVM.players, by: { $0.position })
     }
-    init(teamVM: TeamViewModel) {
+    init(inventoryVM: InventoryViewModel, teamVM: TeamViewModel) {
         // This removes the separator lines for all UITableViews in the app
         self.teamVM = teamVM
+        self.inventoryVM = inventoryVM
         UITableView.appearance().separatorStyle = .none
     }
     var body: some View {
@@ -91,7 +93,7 @@ struct TeamUIView: View {
             }
             .sheet(isPresented: $showSheet) {
                 // Sheet content
-                AddPlayerUIView(teamVM: teamVM, isPresented: $showSheet)
+                AddPlayerUIView(inventoryVM: inventoryVM, teamVM: teamVM, isPresented: $showSheet)
             }
             .ignoresSafeArea()
         }
@@ -99,7 +101,7 @@ struct TeamUIView: View {
 }
 
 #Preview {
-    TeamUIView(teamVM: TeamViewModel())
+    TeamUIView(inventoryVM: InventoryViewModel(), teamVM: TeamViewModel())
 }
 
 struct CustomCornerRadiusShape: Shape {

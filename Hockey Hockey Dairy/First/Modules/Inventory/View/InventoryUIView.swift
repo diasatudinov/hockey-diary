@@ -70,7 +70,7 @@ struct InventoryUIView: View {
                 if !inventoryVM.inventories.isEmpty {
                     List {
                         ForEach(filteredPlayers()) { inventory in
-                            InventoryCellUIView(selectedImage: inventory.image, name: inventory.name, position: inventory.position, state: .normal, isChosen: .constant(false))
+                            InventoryCellUIView(selectedImage: inventory.image, name: inventory.name, position: inventory.position, state: .normal, isChosen: false)
                                 .cornerRadius(10)
                                 .padding(.vertical, -5)
                                 .padding(.horizontal, -4)

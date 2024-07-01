@@ -14,13 +14,13 @@ enum InventoryState {
 }
 
 struct InventoryCellUIView: View {
-    
+    @State var inventory: Inventory?
     var selectedImage: UIImage?
     var name: String
     var position: String
     var price: String?
     @State var state: InventoryState
-    @Binding var isChosen: Bool
+    @State var isChosen: Bool
     var body: some View {
         HStack {
             if let image = selectedImage {
@@ -60,6 +60,7 @@ struct InventoryCellUIView: View {
                 Button {
                     if state == .withPlayer {
                         isChosen.toggle()
+                        //inventory?.isChosen.toggle()
                     }
                 } label: {
                     
@@ -94,6 +95,6 @@ struct InventoryCellUIView: View {
     }
 }
 
-#Preview {
-    InventoryCellUIView(name: "AAAA", position: "Aaasadadasdasd", price: "100",state: .shopItem, isChosen: .constant(false))
-}
+//#Preview {
+//    InventoryCellUIView(investory: Investory(), name: "AAAA", position: "Aaasadadasdasd", price: "100",state: .shopItem, isChosen: false)
+//}
