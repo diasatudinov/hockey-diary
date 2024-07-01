@@ -8,7 +8,7 @@
 import SwiftUI
 
 class InventoryViewModel: ObservableObject {
-    @Published var inventories: [Inventory] = [Inventory(name: "Glove", position: "All positions"), Inventory(name: "Arbuz", position: "All positions"), Inventory(name: "Barber", position: "All positions"), Inventory(name: "Clear", position: "All positions"), Inventory(name: "Dollar", position: "All positions"), Inventory(name: "Green", position: "All positions"), Inventory(name: "Chelsea", position: "All positions"), Inventory(name: "Apple", position: "All positions"), Inventory(name: "Car", position: "All positions")]
+    @Published var inventories: [Inventory] = []
     
     func addInventory(_ inventory: Inventory) {
         inventories.append(inventory)

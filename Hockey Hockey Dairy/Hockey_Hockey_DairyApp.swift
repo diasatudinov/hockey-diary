@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Hockey_Hockey_DairyApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     @State var isWeb = false
     var body: some Scene {
         WindowGroup {
