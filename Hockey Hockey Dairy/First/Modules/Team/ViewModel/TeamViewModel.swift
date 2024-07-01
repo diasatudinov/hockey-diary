@@ -8,7 +8,17 @@
 import SwiftUI
 
 class TeamViewModel: ObservableObject {
-    @Published var players: [Player] = [Player(name: "Atudinov Dias", birthDate: "13.03.1999", position: "Forward", inventory: [])]
+    @Published var players: [Player] = [] {
+        didSet {
+            savePlayers()
+        }
+    }
+    
+    private let playersFileName = "players.json"
+    
+    init() {
+        loadPlayers()
+    }
     
     func addPlayer(_ player: Player) {
         players.append(player)
@@ -25,5 +35,34 @@ class TeamViewModel: ObservableObject {
     func deletePlayer(at index: Int) {
         guard index < players.count else { return }
         players.remove(at: index)
+    }
+    
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func playersFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(playersFileName)
+    }
+    
+    private func savePlayers() {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(players)
+            try data.write(to: playersFilePath())
+        } catch {
+            print("Failed to save players: \(error.localizedDescription)")
+        }
+    }
+    
+    private func loadPlayers() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: playersFilePath())
+            players = try decoder.decode([Player].self, from: data)
+        } catch {
+            print("Failed to load players: \(error.localizedDescription)")
+        }
     }
 }

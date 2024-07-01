@@ -14,6 +14,7 @@ enum updateState {
 }
 
 struct UpdatePlayerUIView: View {
+    @State var player: Player
     @ObservedObject var inventoryVM = InventoryViewModel()
     @ObservedObject var teamVM: TeamViewModel
     let standardNavBarHeight = UIScreen.main.bounds.height / 8.6
@@ -62,7 +63,10 @@ struct UpdatePlayerUIView: View {
                                     .foregroundColor(.green)
                             }
                             Button {
-                                teamVM.deletePlayer(at: index)
+                                if let index = teamVM.players.firstIndex(where: { $0.name == player.name && $0.position == player.position }) {
+                                    teamVM.deletePlayer(at: index)
+                                }
+                                //teamVM.deletePlayer(at: index)
                                 state = .normal
                                 presentationMode.wrappedValue.dismiss()
                             } label: {
@@ -280,6 +284,8 @@ struct UpdatePlayerUIView: View {
             }
             Spacer()
             
+        }.onAppear{
+            print("Выбранный", index)
         }
             .navigationBarBackButtonHidden()
         .ignoresSafeArea()
@@ -323,6 +329,6 @@ struct UpdatePlayerUIView: View {
     }
 }
 
-#Preview {
-    UpdatePlayerUIView(teamVM: TeamViewModel(), name: "AAA", birthDate: "13.03.1999", position: "Forward", state: .normal, index: 0)
-}
+//#Preview {
+//    UpdatePlayerUIView(player: Player(from: Decoder()), teamVM: TeamViewModel(), name: "AAA", birthDate: "13.03.1999", position: "Forward", state: .normal, index: 0)
+//}

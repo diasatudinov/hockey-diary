@@ -57,7 +57,7 @@ struct TeamUIView: View {
                                     ForEach(players.indices, id: \.self) { index in
                                         let player = players[index]
                                         NavigationLink {
-                                            UpdatePlayerUIView(teamVM: teamVM, selectedImage: player.image ,name: player.name, birthDate: player.birthDate, position: player.position, state: .normal, index: index)
+                                            UpdatePlayerUIView(player: player, teamVM: teamVM, selectedImage: player.image ,name: player.name, birthDate: player.birthDate, position: player.position, state: .normal, index: index)
                                         } label: {
                                             
                                             TeamCellUIView(selectedImage: player.image, name: player.name, birthDate: player.birthDate)

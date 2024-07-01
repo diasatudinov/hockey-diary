@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Inventory: Identifiable, Codable, Equatable {
+struct Inventory: Identifiable, Codable, Equatable, Hashable {
     var id = UUID()
     var name: String
     var imageData: Data?

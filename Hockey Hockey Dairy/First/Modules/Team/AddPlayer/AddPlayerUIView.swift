@@ -173,10 +173,10 @@ struct AddPlayerUIView: View {
                 Button {
                     if !name.isEmpty && !birthDate.isEmpty && !position.isEmpty {
                         if let image = selectedImage {
-                            teamVM.addPlayer(Player(image: image, name: name, birthDate: birthDate, position: position, inventory: newInventory))
+                            teamVM.addPlayer(Player(imageData: image.jpegData(compressionQuality: 1.0), name: name, birthDate: birthDate, position: position, inventory: newInventory))
                            
                         } else {
-                            teamVM.addPlayer(Player(image: nil, name: name, birthDate: birthDate, position: position, inventory: newInventory))
+                            teamVM.addPlayer(Player(imageData: nil, name: name, birthDate: birthDate, position: position, inventory: newInventory))
                             
                         }
                         isPresented = false
