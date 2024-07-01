@@ -8,7 +8,17 @@
 import SwiftUI
 
 class InventoryViewModel: ObservableObject {
-    @Published var inventories: [Inventory] = []
+    @Published var inventories: [Inventory] = [] {
+        didSet {
+            saveInventories()
+        }
+    }
+    
+    private let inventoriesFileName = "inventories.json"
+    
+    init() {
+        loadInventories()
+    }
     
     func addInventory(_ inventory: Inventory) {
         inventories.append(inventory)
@@ -24,6 +34,7 @@ class InventoryViewModel: ObservableObject {
     func toggleInventory(at index: Int) {
         inventories[index].isChosen.toggle()
     }
+    
     func delete(at offsets: IndexSet) {
         inventories.remove(atOffsets: offsets)
     }
@@ -36,4 +47,32 @@ class InventoryViewModel: ObservableObject {
         }
     }
     
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func inventoriesFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(inventoriesFileName)
+    }
+    
+    private func saveInventories() {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(inventories)
+            try data.write(to: inventoriesFilePath())
+        } catch {
+            print("Failed to save inventories: \(error.localizedDescription)")
+        }
+    }
+    
+    private func loadInventories() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: inventoriesFilePath())
+            inventories = try decoder.decode([Inventory].self, from: data)
+        } catch {
+            print("Failed to load inventories: \(error.localizedDescription)")
+        }
+    }
 }
