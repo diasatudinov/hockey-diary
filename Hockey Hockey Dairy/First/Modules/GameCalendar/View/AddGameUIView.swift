@@ -171,9 +171,9 @@ struct AddGameUIView: View {
                 if !date.isEmpty && !time.isEmpty && !opponent.isEmpty && !location.isEmpty {
                     if let selectedDate = selectedDate {
                         if let image = selectedImage {
-                            calendarVM.addGame(Game(image: image, date: date, time: time, opponentName: opponent, location: location, additionalInfo: []), toDayWithDate: selectedDate)
+                            calendarVM.addGame(Game(imageData: image.jpegData(compressionQuality: 1.0), date: date, time: time, opponentName: opponent, location: location, additionalInfo: []), toDayWithDate: selectedDate)
                         } else {
-                            calendarVM.addGame(Game(image: nil, date: date, time: time, opponentName: opponent, location: location, additionalInfo: []), toDayWithDate: selectedDate)
+                            calendarVM.addGame(Game(imageData: nil, date: date, time: time, opponentName: opponent, location: location, additionalInfo: []), toDayWithDate: selectedDate)
                         }
                     }
                     presentationMode.wrappedValue.dismiss()

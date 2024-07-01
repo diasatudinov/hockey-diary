@@ -66,7 +66,6 @@ struct UpdatePlayerUIView: View {
                                 if let index = teamVM.players.firstIndex(where: { $0.name == player.name && $0.position == player.position }) {
                                     teamVM.deletePlayer(at: index)
                                 }
-                                //teamVM.deletePlayer(at: index)
                                 state = .normal
                                 presentationMode.wrappedValue.dismiss()
                             } label: {

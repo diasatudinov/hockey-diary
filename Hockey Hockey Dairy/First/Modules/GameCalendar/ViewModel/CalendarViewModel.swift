@@ -8,10 +8,17 @@
 import UIKit
 
 class CalendarViewModel: ObservableObject {
-    @Published var days: [DayModel] = []
+    @Published var days: [DayModel] = [] {
+        didSet {
+            saveDays()
+        }
+    }
+        
+    private let daysFileName = "days.json"
     
     init() {
-        days = dates()
+        //days = dates()
+        loadDays()
     }
     
 //    func resetAll() {
@@ -70,20 +77,40 @@ class CalendarViewModel: ObservableObject {
         }
         return []
     }
-//    func addPlayer(_ player: Player) {
-//        players.append(player)
-//    }
-//
-//    func updatePlayer(at index: Int, newImage: UIImage?, newName: String, newBirthDate: String, newPosition: String) {
-//        guard index < players.count else { return }
-//        players[index].name = newName
-//        players[index].image = newImage
-//        players[index].birthDate = newBirthDate
-//        players[index].position = newPosition
-//    }
-//    
-//    func deletePlayer(at index: Int) {
-//        guard index < players.count else { return }
-//        players.remove(at: index)
-//    }
+    
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func inventoriesFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(daysFileName)
+    }
+    
+    private func saveDays() {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(days)
+            try data.write(to: inventoriesFilePath())
+            print("Saved inventories", days[0])
+        } catch {
+            print("Failed to save inventories: \(error.localizedDescription)")
+        }
+    }
+    
+    private func loadDays() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: inventoriesFilePath())
+            if data.isEmpty {
+                days = dates() // Если файл пустой, создаем новый массив
+            } else {
+                days = try decoder.decode([DayModel].self, from: data)
+            }
+            //days = try decoder.decode([DayModel].self, from: data)
+            print("Loaded inventories", days[0])
+        } catch {
+            print("Failed to load inventories: \(error.localizedDescription)")
+        }
+    }
 }
