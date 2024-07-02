@@ -24,6 +24,20 @@ class InventoryViewModel: ObservableObject {
         inventories.append(inventory)
     }
 
+    func resetIsChosen() {
+        for index in inventories.indices {
+            inventories[index].isChosen = false
+        }
+    }
+    
+    func updateChosenStatus(with otherInventories: [Inventory]) {
+        for index in inventories.indices {
+            if otherInventories.contains(where: { $0.id == inventories[index].id }) {
+                inventories[index].isChosen = true
+            }
+        }
+    }
+    
     func updateInventory(at index: Int, newImage: UIImage?, newName: String, newPosition: String) {
         guard index < inventories.count else { return }
         inventories[index].name = newName

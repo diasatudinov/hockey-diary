@@ -16,9 +16,10 @@ struct PlayerInventoryUIView: View {
     @ObservedObject var inventoryVM: InventoryViewModel
     @ObservedObject var teamVM: TeamViewModel
     let standardNavBarHeight = UIScreen.main.bounds.height / 8.6
-    @State var inventories: [Inventory]
+    @Binding var inventories: [Inventory]
     @Environment(\.presentationMode) var presentationMode
     @State var index = 0
+    @State var player: Player?
     @State var state: PlayerInventoryState = .add
     var body: some View {
         VStack {
@@ -54,63 +55,66 @@ struct PlayerInventoryUIView: View {
                     }
                 }.frame(height: standardNavBarHeight)
                 
-            }.padding(.bottom, 24)
+            }.padding(.bottom, 10)
             
             ScrollView {
                 if state == .add {
                     
                     ForEach(inventoryVM.inventories, id: \.self) { inventory in
-                            InventoryCellUIView(inventory: inventory, selectedImage: inventory.image, name: inventory.name, position: inventory.position, state: .withPlayer, isChosen: inventory.isChosen)
-                                .cornerRadius(10)
-//                                .onTapGesture {
-//                                    //inventory.isChosen.toggle()
-//                                    if let index = inventoryVM.inventories.firstIndex(where: { $0.id == inventory.id }) {
-//                                        inventoryVM.toggleInventory(at: index)
-//                                    }
-//                                }
+                        InventoryCellUIView(inventory: inventory, selectedImage: inventory.image, name: inventory.name, position: inventory.position, state: .withPlayer, isChosen: inventory.isChosen)
+                            .cornerRadius(10)
+                            .onTapGesture {
+                                if let index = inventories.firstIndex(where: { $0.id == inventory.id }) {
+                                    // Удалить элемент
+                                    inventories.remove(at: index)
+                                    print("\(inventory.name) REMOVED")
+                                } else {
+                                    // Добавить элемент
+                                    inventories.append(inventory)
+                                    print("\(inventory.name) ADDED")
+                                }
+                                inventoryVM.toggleInventory(at: inventoryVM.inventories.firstIndex(where: { $0.id == inventory.id })!)
+                                print("\(inventory.name) PRESSED")
+                            }
                     }
-                        
+                    
                 } else {
-                    ForEach(teamVM.players[index].inventory, id: \.self) { _ in
-                        if let index = inventoryVM.inventories.firstIndex(where: { $0.position.uppercased() == teamVM.players[index].position.uppercased() || $0.position.uppercased() == "all positions".uppercased() ||  $0.position.uppercased() == "all".uppercased()}) {
-                            let inventory = inventories[index]
-
+                    if let player = player {
+                        ForEach(inventoryVM.inventories, id: \.self) { inventory in
                             InventoryCellUIView(selectedImage: inventory.image, name: inventory.name, position: inventory.position, state: .withPlayer, isChosen: inventory.isChosen)
                                 .cornerRadius(10)
-//                                .onTapGesture {
-//                                    if let index = inventoryVM.inventories.firstIndex(where: { $0.id == inventory.id }) {
-//                                        inventoryVM.toggleInventory(at: index)
-//                                    }
-//                                }
+                                .onAppear{
+                                    //inventories = player.inventory
+                                    inventoryVM.updateChosenStatus(with: player.inventory)
+                                }
                             
                         }
                     }
                 }
-                
             }
             .padding(.horizontal)
-            .padding(.bottom, 24)
+            .padding(.bottom, 76)
             
-           
+            
             Spacer()
             
         }
-            .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden()
         .ignoresSafeArea()
-//        .onAppear{
-//            if inventories.isEmpty {
-//                inventories = inventoryVM.inventories
-//            }
-//        }
         
+    }
+    
+    func inventoryDelete(at index: Int) {
+        guard index < inventories.count - 1 else { return }
+        inventories.remove(at: index)
     }
     
 }
 
 #Preview {
-    PlayerInventoryUIView(inventoryVM: InventoryViewModel(), teamVM: TeamViewModel(), inventories: [
+    PlayerInventoryUIView(inventoryVM: InventoryViewModel(), teamVM: TeamViewModel(), inventories: .constant([
         Inventory(name: "aaa", position: "asdsad", isChosen: false),
         Inventory(name: "aaa", position: "asdsad", isChosen: false),
         Inventory(name: "aaa", position: "asdsad", isChosen: false),
-        Inventory(name: "aaa", position: "asdsad", isChosen: false)])
+        Inventory(name: "aaa", position: "asdsad", isChosen: false)]))
 }

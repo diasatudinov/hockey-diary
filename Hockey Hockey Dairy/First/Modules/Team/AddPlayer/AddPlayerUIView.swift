@@ -149,7 +149,7 @@ struct AddPlayerUIView: View {
                 
                 
                 NavigationLink {
-                    PlayerInventoryUIView(inventoryVM: inventoryVM, teamVM: teamVM, inventories: newInventory)
+                    PlayerInventoryUIView(inventoryVM: inventoryVM, teamVM: teamVM, inventories: $newInventory)
                 } label: {
                     ZStack(alignment: .leading) {
                         Rectangle()
@@ -175,6 +175,7 @@ struct AddPlayerUIView: View {
                         if let image = selectedImage {
                             teamVM.addPlayer(Player(imageData: image.jpegData(compressionQuality: 1.0), name: name, birthDate: birthDate, position: position, inventory: newInventory))
                            
+                            
                         } else {
                             teamVM.addPlayer(Player(imageData: nil, name: name, birthDate: birthDate, position: position, inventory: newInventory))
                             
@@ -193,7 +194,9 @@ struct AddPlayerUIView: View {
                             .font(.system(size: 17, weight: .bold))
                             .foregroundColor(.white)
                     }
-                }.padding(.bottom)
+                }.padding(.bottom).onAppear{
+                    inventoryVM.resetIsChosen()
+                }
                 
             }.sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
                 ImagePicker(selectedImage: $selectedImage, isPresented: $isShowingImagePicker)

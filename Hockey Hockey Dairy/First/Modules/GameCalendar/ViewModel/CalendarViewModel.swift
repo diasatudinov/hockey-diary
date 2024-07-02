@@ -17,15 +17,9 @@ class CalendarViewModel: ObservableObject {
     private let daysFileName = "days.json"
     
     init() {
-        //days = dates()
         loadDays()
     }
     
-//    func resetAll() {
-//        days.forEach { day in
-//            day.games.removeAll()
-//        }
-//    }
     private func dates() -> [DayModel] {
         let everyDay: [Date] = Date().allDatesForYear()
         
@@ -92,7 +86,6 @@ class CalendarViewModel: ObservableObject {
         do {
             let data = try encoder.encode(days)
             try data.write(to: inventoriesFilePath())
-            print("Saved inventories", days[0])
         } catch {
             print("Failed to save inventories: \(error.localizedDescription)")
         }
@@ -108,7 +101,6 @@ class CalendarViewModel: ObservableObject {
                 days = try decoder.decode([DayModel].self, from: data)
             }
             //days = try decoder.decode([DayModel].self, from: data)
-            print("Loaded inventories", days[0])
         } catch {
             print("Failed to load inventories: \(error.localizedDescription)")
         }

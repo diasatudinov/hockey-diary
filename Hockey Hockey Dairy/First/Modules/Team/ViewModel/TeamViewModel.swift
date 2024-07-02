@@ -37,6 +37,16 @@ class TeamViewModel: ObservableObject {
         players.remove(at: index)
     }
     
+    func deletePlayerInventary(at playerIndex: Int, at index: Int) {
+        guard playerIndex < players.count else { return }
+        players[playerIndex].inventory.remove(at: index)
+    }
+    
+    func addPlayerInventary(at playerIndex: Int, inventory: Inventory) {
+        guard playerIndex < players.count else { return }
+        players[playerIndex].inventory.append(inventory)
+    }
+    
     private func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]

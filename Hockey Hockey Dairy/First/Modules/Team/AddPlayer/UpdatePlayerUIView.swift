@@ -262,7 +262,7 @@ struct UpdatePlayerUIView: View {
             .padding(.bottom, 24)
             
             NavigationLink {
-                //PlayerInventoryUIView(teamVM: teamVM, inventories: $teamVM.players[index].inventory, index: index, state: .update)
+                PlayerInventoryUIView(inventoryVM: inventoryVM, teamVM: teamVM, inventories: $player.inventory, index: index, player: player, state: .update)
             } label: {
                 ZStack(alignment: .leading) {
                     Rectangle()
