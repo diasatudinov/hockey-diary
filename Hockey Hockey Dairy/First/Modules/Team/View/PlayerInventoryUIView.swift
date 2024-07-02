@@ -79,10 +79,24 @@ struct PlayerInventoryUIView: View {
                     }
                     
                 } else {
-                    if let player = player {
+                    if var player = player {
                         ForEach(inventoryVM.inventories, id: \.self) { inventory in
                             InventoryCellUIView(selectedImage: inventory.image, name: inventory.name, position: inventory.position, state: .withPlayer, isChosen: inventory.isChosen)
                                 .cornerRadius(10)
+                                .onTapGesture {
+                                    //player.inventory.append(inventory)
+                                    
+                                    if let index = inventories.firstIndex(where: { $0.id == inventory.id }) {
+                                        inventories.remove(at: index)
+                                    } else {
+                                        // Добавить элемент
+                                        inventories.append(inventory)
+                                        
+                                    }
+                                    
+                                    //inventoryVM.updateChosenStatus(with: inventories)
+                                    print(inventories)
+                                }
                                 .onAppear{
                                     //inventories = player.inventory
                                     inventoryVM.updateChosenStatus(with: player.inventory)

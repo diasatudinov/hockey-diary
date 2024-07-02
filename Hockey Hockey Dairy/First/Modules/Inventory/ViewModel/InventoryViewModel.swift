@@ -34,7 +34,10 @@ class InventoryViewModel: ObservableObject {
         for index in inventories.indices {
             if otherInventories.contains(where: { $0.id == inventories[index].id }) {
                 inventories[index].isChosen = true
+            } else {
+                inventories[index].isChosen = false
             }
+            
         }
     }
     
