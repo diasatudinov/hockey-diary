@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BBBD1602C2C07340057F363 /* Hockey_Hockey_DairyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD15F2C2C07340057F363 /* Hockey_Hockey_DairyApp.swift */; };
-		2BBBD1622C2C07340057F363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1612C2C07340057F363 /* ContentView.swift */; };
+		2BBBD1622C2C07340057F363 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1612C2C07340057F363 /* StartView.swift */; };
 		2BBBD1642C2C07360057F363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBBD1632C2C07360057F363 /* Assets.xcassets */; };
 		2BBBD1672C2C07360057F363 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBBD1662C2C07360057F363 /* Preview Assets.xcassets */; };
 		2BBBD1722C2C08660057F363 /* LoadingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1712C2C08660057F363 /* LoadingUIView.swift */; };
@@ -49,12 +49,14 @@
 		2BBBD1D62C32A40B0057F363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1D52C32A40B0057F363 /* AppDelegate.swift */; };
 		2BBBD1D92C32AC7F0057F363 /* WebUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1D82C32AC7F0057F363 /* WebUIView.swift */; };
 		2BBBD1DB2C32B7830057F363 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DA2C32B7830057F363 /* WebView.swift */; };
+		2BBBD1DE2C3434450057F363 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DD2C3434450057F363 /* Data.swift */; };
+		2BBBD1E02C343EAD0057F363 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DF2C343EAD0057F363 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2BBBD15C2C2C07340057F363 /* Hockey Hockey Dairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hockey Hockey Dairy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBBD15F2C2C07340057F363 /* Hockey_Hockey_DairyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hockey_Hockey_DairyApp.swift; sourceTree = "<group>"; };
-		2BBBD1612C2C07340057F363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BBBD1612C2C07340057F363 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		2BBBD1632C2C07360057F363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BBBD1662C2C07360057F363 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BBBD1712C2C08660057F363 /* LoadingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUIView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		2BBBD1D52C32A40B0057F363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BBBD1D82C32AC7F0057F363 /* WebUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUIView.swift; sourceTree = "<group>"; };
 		2BBBD1DA2C32B7830057F363 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2BBBD1DD2C3434450057F363 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2BBBD1DF2C343EAD0057F363 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +131,11 @@
 		2BBBD15E2C2C07340057F363 /* Hockey Hockey Dairy */ = {
 			isa = PBXGroup;
 			children = (
+				2BBBD1DC2C3434240057F363 /* Service */,
 				2BBBD16D2C2C08260057F363 /* First */,
 				2BBBD16E2C2C08340057F363 /* Second */,
 				2BBBD15F2C2C07340057F363 /* Hockey_Hockey_DairyApp.swift */,
-				2BBBD1612C2C07340057F363 /* ContentView.swift */,
+				2BBBD1612C2C07340057F363 /* StartView.swift */,
 				2BBBD1D52C32A40B0057F363 /* AppDelegate.swift */,
 				2BBBD1632C2C07360057F363 /* Assets.xcassets */,
 				2BBBD1652C2C07360057F363 /* Preview Content */,
@@ -425,6 +430,15 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		2BBBD1DC2C3434240057F363 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBD1DD2C3434450057F363 /* Data.swift */,
+				2BBBD1DF2C343EAD0057F363 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -515,7 +529,7 @@
 				2BBBD1992C2DB2430057F363 /* InventoryUIView.swift in Sources */,
 				2BBBD1C12C30337C0057F363 /* AddGameUIView.swift in Sources */,
 				2BBBD17C2C2C57C60057F363 /* TeamUIView.swift in Sources */,
-				2BBBD1622C2C07340057F363 /* ContentView.swift in Sources */,
+				2BBBD1622C2C07340057F363 /* StartView.swift in Sources */,
 				2BBBD1882C2D69740057F363 /* AddPlayerUIView.swift in Sources */,
 				2BBBD1CB2C318E2B0057F363 /* SettingsUIView.swift in Sources */,
 				2BBBD1792C2C4F250057F363 /* TabUIView.swift in Sources */,
@@ -528,10 +542,12 @@
 				2BBBD1BD2C3022BE0057F363 /* DayModel.swift in Sources */,
 				2BBBD18A2C2D6ED40057F363 /* ImagePickerController.swift in Sources */,
 				2BBBD19B2C2EA6470057F363 /* InventoryCellUIView.swift in Sources */,
+				2BBBD1DE2C3434450057F363 /* Data.swift in Sources */,
 				2BBBD1722C2C08660057F363 /* LoadingUIView.swift in Sources */,
 				2BBBD1B12C2FF6610057F363 /* ItemViewModel.swift in Sources */,
 				2BBBD19E2C2EAF4E0057F363 /* AddInventoryUIView.swift in Sources */,
 				2BBBD1602C2C07340057F363 /* Hockey_Hockey_DairyApp.swift in Sources */,
+				2BBBD1E02C343EAD0057F363 /* Service.swift in Sources */,
 				2BBBD1AB2C2FF42F0057F363 /* AddItemUIView.swift in Sources */,
 				2BBBD1BB2C301B6B0057F363 /* GameCardUIView.swift in Sources */,
 				2BBBD1AF2C2FF4AF0057F363 /* ItemModel.swift in Sources */,
