@@ -57,12 +57,12 @@ struct InventoryCellUIView: View {
             }.padding(.leading, 12)
             Spacer()
             if state == .withPlayer {
-                Button {
-                    if state == .withPlayer {
-                        isChosen.toggle()
-                        //inventory?.isChosen.toggle()
-                    }
-                } label: {
+//                Button {
+//                    if state == .withPlayer {
+//                        isChosen.toggle()
+//                        //inventory?.isChosen.toggle()
+//                    }
+//                } label: {
                     
                     Image(systemName: "circle.fill")
                         .resizable()
@@ -77,7 +77,7 @@ struct InventoryCellUIView: View {
                         .frame(width: 22, height: 22)
                         .padding(.trailing)
                     
-                }
+//                }
             } else if state == .shopItem {
                 if let price = price {
                     Text("$\(price)")
