@@ -32,6 +32,12 @@ class TeamViewModel: ObservableObject {
         players[index].position = newPosition
     }
     
+    func updatePlayerInventory(player: Player, inventory: [Inventory]) {
+        if let index = players.firstIndex(where: { $0.id == player.id}) {
+            players[index].inventory = inventory
+        }
+    }
+    
     func deletePlayer(at index: Int) {
         guard index < players.count else { return }
         players.remove(at: index)

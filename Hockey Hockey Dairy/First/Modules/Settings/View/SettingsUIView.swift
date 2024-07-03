@@ -40,7 +40,7 @@ struct SettingsUIView: View {
                     
                     VStack {
                         Button {
-                            
+                            openUsagePolicy()
                         } label: {
                             HStack {
                                 Image(systemName: "doc.text.fill")
@@ -61,7 +61,7 @@ struct SettingsUIView: View {
                             .padding(.leading, 50)
                             
                         Button {
-                            
+                            shareApp()
                         } label: {
                             HStack {
                                 Image(systemName: "square.and.arrow.up.fill")
@@ -82,7 +82,7 @@ struct SettingsUIView: View {
                             .padding(.leading, 50)
                         
                         Button {
-                            
+                            rateApp()
                         } label: {
                             HStack {
                                 Image(systemName: "star.fill")
@@ -126,6 +126,30 @@ struct SettingsUIView: View {
         }.padding(.bottom, 96)
             .ignoresSafeArea()
     }
+    
+    private func shareApp() {
+        guard let url = URL(string: "https://apps.apple.com/app/idYOUR_APP_ID") else { return }
+        let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    private func rateApp() {
+        guard let url = URL(string: "https://apps.apple.com/app/idYOUR_APP_ID?action=write-review") else { return }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func openUsagePolicy() {
+           guard let url = URL(string: "https://www.google.com") else { return }
+           if UIApplication.shared.canOpenURL(url) {
+               UIApplication.shared.open(url, options: [:], completionHandler: nil)
+           }
+       }
 }
 
 #Preview {

@@ -51,6 +51,7 @@
 		2BBBD1DB2C32B7830057F363 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DA2C32B7830057F363 /* WebView.swift */; };
 		2BBBD1DE2C3434450057F363 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DD2C3434450057F363 /* Data.swift */; };
 		2BBBD1E02C343EAD0057F363 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DF2C343EAD0057F363 /* Service.swift */; };
+		2BBBD1E22C3556C10057F363 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1E12C3556C10057F363 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		2BBBD1DA2C32B7830057F363 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		2BBBD1DD2C3434450057F363 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2BBBD1DF2C343EAD0057F363 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2BBBD1E12C3556C10057F363 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				2BBBD1CA2C318E2B0057F363 /* SettingsUIView.swift */,
+				2BBBD1E12C3556C10057F363 /* SwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				2BBBD19B2C2EA6470057F363 /* InventoryCellUIView.swift in Sources */,
 				2BBBD1DE2C3434450057F363 /* Data.swift in Sources */,
 				2BBBD1722C2C08660057F363 /* LoadingUIView.swift in Sources */,
+				2BBBD1E22C3556C10057F363 /* SwiftUIView.swift in Sources */,
 				2BBBD1B12C2FF6610057F363 /* ItemViewModel.swift in Sources */,
 				2BBBD19E2C2EAF4E0057F363 /* AddInventoryUIView.swift in Sources */,
 				2BBBD1602C2C07340057F363 /* Hockey_Hockey_DairyApp.swift in Sources */,
