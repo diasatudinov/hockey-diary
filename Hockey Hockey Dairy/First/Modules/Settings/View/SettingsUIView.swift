@@ -138,14 +138,14 @@ struct SettingsUIView: View {
     }
     
     private func rateApp() {
-        guard let url = URL(string: "https://apps.apple.com/app/idYOUR_APP_ID?action=write-review") else { return }
+        guard let url = URL(string: "https://apps.apple.com/app/gear-up-playbook/id6511246643") else { return }
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
     
     private func openUsagePolicy() {
-           guard let url = URL(string: "https://www.google.com") else { return }
+           guard let url = URL(string: "https://www.termsfeed.com/live/ea4add31-897e-48b9-bf34-e3ede7780771") else { return }
            if UIApplication.shared.canOpenURL(url) {
                UIApplication.shared.open(url, options: [:], completionHandler: nil)
            }

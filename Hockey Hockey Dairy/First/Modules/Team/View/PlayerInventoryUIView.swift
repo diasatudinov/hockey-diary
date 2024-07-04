@@ -88,15 +88,14 @@ struct PlayerInventoryUIView: View {
                                     
                                     if let index = inventories.firstIndex(where: { $0.id == inventory.id }) {
                                         inventories.remove(at: index)
-                                        teamVM.updatePlayerInventory(player: player, inventory: inventories)
-                                        inventoryVM.updateChosenStatus(with: player.inventory)
+                                        
                                     } else {
                                         // Добавить элемент
                                         inventories.append(inventory)
-                                        teamVM.updatePlayerInventory(player: player, inventory: inventories)
-                                        inventoryVM.updateChosenStatus(with: player.inventory)
+                                        
                                     }
-                                    
+                                    teamVM.updatePlayerInventory(player: player, inventory: inventories)
+                                    inventoryVM.updateChosenStatus(with: player.inventory)
                                     //inventoryVM.updateChosenStatus(with: inventories)
                                     print(inventories)
                                 }

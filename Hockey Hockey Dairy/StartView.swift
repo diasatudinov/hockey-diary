@@ -17,7 +17,7 @@ struct StartView: View {
         
         Group {
             if let response = apiResponse {
-                if !response.nonreloadable {
+                if response.nonreloadable {
                     LoadingUserUIView()
                 } else {
                     LoadingUIView()
