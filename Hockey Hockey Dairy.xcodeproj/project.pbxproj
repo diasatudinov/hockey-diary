@@ -52,6 +52,11 @@
 		2BBBD1DE2C3434450057F363 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DD2C3434450057F363 /* Data.swift */; };
 		2BBBD1E02C343EAD0057F363 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1DF2C343EAD0057F363 /* Service.swift */; };
 		2BBBD1E22C3556C10057F363 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBD1E12C3556C10057F363 /* SwiftUIView.swift */; };
+		2BBBD1E52C3719060057F363 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 2BBBD1E42C3719060057F363 /* ApphudSDK */; };
+		2BBBD1E82C371A490057F363 /* AppMetricaAdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2BBBD1E72C371A490057F363 /* AppMetricaAdSupport */; };
+		2BBBD1EA2C371A490057F363 /* AppMetricaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2BBBD1E92C371A490057F363 /* AppMetricaCore */; };
+		2BBBD1EC2C371A490057F363 /* AppMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 2BBBD1EB2C371A490057F363 /* AppMetricaCrashes */; };
+		2BBBD1EE2C371A490057F363 /* AppMetricaWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BBBD1ED2C371A490057F363 /* AppMetricaWebKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,9 +109,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BBBD1EC2C371A490057F363 /* AppMetricaCrashes in Frameworks */,
 				2BBBD1D22C32A3F30057F363 /* OneSignalInAppMessages in Frameworks */,
+				2BBBD1E82C371A490057F363 /* AppMetricaAdSupport in Frameworks */,
 				2BBBD1D02C32A3F30057F363 /* OneSignalFramework in Frameworks */,
+				2BBBD1E52C3719060057F363 /* ApphudSDK in Frameworks */,
+				2BBBD1EA2C371A490057F363 /* AppMetricaCore in Frameworks */,
 				2BBBD1D42C32A3F30057F363 /* OneSignalLocation in Frameworks */,
+				2BBBD1EE2C371A490057F363 /* AppMetricaWebKit in Frameworks */,
 				2BBBD1CE2C32A3F30057F363 /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +473,11 @@
 				2BBBD1CF2C32A3F30057F363 /* OneSignalFramework */,
 				2BBBD1D12C32A3F30057F363 /* OneSignalInAppMessages */,
 				2BBBD1D32C32A3F30057F363 /* OneSignalLocation */,
+				2BBBD1E42C3719060057F363 /* ApphudSDK */,
+				2BBBD1E72C371A490057F363 /* AppMetricaAdSupport */,
+				2BBBD1E92C371A490057F363 /* AppMetricaCore */,
+				2BBBD1EB2C371A490057F363 /* AppMetricaCrashes */,
+				2BBBD1ED2C371A490057F363 /* AppMetricaWebKit */,
 			);
 			productName = "Hockey Hockey Dairy";
 			productReference = 2BBBD15C2C2C07340057F363 /* Hockey Hockey Dairy.app */;
@@ -494,6 +509,8 @@
 			mainGroup = 2BBBD1532C2C07340057F363;
 			packageReferences = (
 				2BBBD1CC2C32A3F30057F363 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				2BBBD1E32C3719060057F363 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+				2BBBD1E62C371A490057F363 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */,
 			);
 			productRefGroup = 2BBBD15D2C2C07340057F363 /* Products */;
 			projectDirPath = "";
@@ -698,7 +715,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -708,9 +725,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "adm.Hockey-Hockey-Dairy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -727,7 +748,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -737,9 +758,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "adm.Hockey-Hockey-Dairy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -775,6 +800,22 @@
 				minimumVersion = 5.2.1;
 			};
 		};
+		2BBBD1E32C3719060057F363 /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apphud/ApphudSDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.8;
+			};
+		};
+		2BBBD1E62C371A490057F363 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appmetrica/appmetrica-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -797,6 +838,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2BBBD1CC2C32A3F30057F363 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalLocation;
+		};
+		2BBBD1E42C3719060057F363 /* ApphudSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BBBD1E32C3719060057F363 /* XCRemoteSwiftPackageReference "ApphudSDK" */;
+			productName = ApphudSDK;
+		};
+		2BBBD1E72C371A490057F363 /* AppMetricaAdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BBBD1E62C371A490057F363 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaAdSupport;
+		};
+		2BBBD1E92C371A490057F363 /* AppMetricaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BBBD1E62C371A490057F363 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCore;
+		};
+		2BBBD1EB2C371A490057F363 /* AppMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BBBD1E62C371A490057F363 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCrashes;
+		};
+		2BBBD1ED2C371A490057F363 /* AppMetricaWebKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BBBD1E62C371A490057F363 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaWebKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
